@@ -1,0 +1,78 @@
+
+Features
+
+    users can sign into the app with their email and password
+
+    users can create recipes with ingredients and instructions
+
+    recipes can be marked as public or private
+
+    users can view other people’s recipes
+
+    ingredients from recipes can be added to user’s grocery lists
+
+    users can create their own occasions and assign recipes to occasions
+
+
+
+
+
+Brainstorming--
+
+users
+-when they log in 
+-email and pw (db col)
+-create recipies
+-users can view others recipies
+-user can add ingredients
+
+recipes
+-can be marked as public or private
+-ingredients can be added
+-recipes can be assigned to occasions
+
+grocery lists
+-ingredients can be added
+
+occasions
+-recipes can be made inside of occasions
+
+
+
+
+Table Ideas--
+
+users
+-user_id PRIMARY KEY*
+-email VARCHAR(50)
+-password VARCHAR (50)
+
+ingredients
+-ingredients_id PRIMARY KEY (50)
+-name VARCHAR(50)
+-price INT 
+-origin VARCHAR(50)
+
+
+middle table
+ingredients_recipies
+-ingredients_recipies_id PRIMARY KEY
+-ingredients_id FOREIGN KEY (ingredients_id)
+-recipe_id FOREIGN KEY recipes(recipe_id)
+
+recipes
+-recipe_id PRIMARY KEY(50)
+-content TEXT
+-name VARCHAR(50)
+
+
+middle table
+-recipes_occasion
+-recipes_occasion_id PRIMARY KEY
+-recipe_id FOREIGN KEY recipes(recipe_id)
+-occasions_id FOREIGN KEY (occasions_id)
+
+occasions
+-occasions_id PRIMARY KEY 
+-name VARCHAR(50)
+
